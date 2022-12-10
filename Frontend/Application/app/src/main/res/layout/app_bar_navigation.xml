@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".util.NavigationActivity"
+        android:id="@+id/titleLayout">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/Theme.FlickPick.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                app:popupTheme="@style/Theme.FlickPick.PopupOverlay"
+                app:navigationIcon="@drawable/ic_baseline_menu_24"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetStartWithNavigation="50dp">
+            <!--            <Button-->
+            <!--                    android:layout_width="50dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:id="@+id/searchButton"-->
+            <!--                    app:icon="@drawable/ic_baseline_search_24"-->
+            <!--                    android:layout_gravity="center_vertical|end"-->
+            <!--                    android:layout_marginEnd="10dp"-->
+            <!--                    android:contentDescription="@string/search_hint"-->
+            <!--                    app:iconTint="@color/white"-->
+            <!--                    android:background="#00FFFFFF" />-->
+            <ActionMenuView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/actionView"
+                    android:layout_gravity="end">
+
+                <androidx.appcompat.widget.SearchView
+                        android:inputType="textAutoCorrect|text|textAutoComplete|textCapWords"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        app:queryHint="@string/search_hint"
+                        android:id="@+id/searchView" />
+            </ActionMenuView>
+            <!--            <AutoCompleteTextView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:id="@+id/searchTextView"-->
+            <!--                    android:visibility="gone"-->
+            <!--                    android:hint="@string/search_hint" />-->
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_navigation" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.movie.MovieFragment"
+        android:layout_gravity="center_horizontal|center_vertical">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp">
+
+                <TextView
+                        android:id="@+id/movieTitleText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="?colorOnPrimary"
+                        android:textSize="24sp"
+                        android:layout_weight="4" />
+
+                <Button
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/movieEditBtn"
+                        android:contentDescription="@string/edit_desc"
+                        app:icon="@drawable/edit"
+                        android:backgroundTint="?colorSecondary"
+                        app:iconPadding="0dp"
+                        app:iconTint="?colorOnSecondary"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/genreText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="?colorOnPrimary"
+                    android:textSize="16sp" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:background="?colorPrimaryDark">
+
+                <ImageView
+                        android:id="@+id/movieImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="?android:attr/galleryItemBackground" />
+
+                <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="10dp">
+
+                        <TextView
+                                android:id="@+id/ratingText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rating: "
+                                android:textColor="?colorOnPrimary"
+                                android:textSize="20sp" />
+
+                        <RatingBar
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/movieFragmentRating"
+                                style="@android:style/Widget.Material.RatingBar.Small"
+                                android:numStars="5"
+                                android:max="5"
+                                android:isIndicator="true"
+                                android:scaleY="1.25"
+                                android:layout_marginEnd="8dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:progressTint="@android:color/holo_orange_light"
+                                android:scaleX="1.25"
+                                android:layout_centerInParent="true" />
+                    </RelativeLayout>
+
+                    <TextView
+                            android:id="@+id/minText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Minutes: "
+                            android:textColor="?colorOnPrimary"
+                            android:textSize="20sp" />
+
+                    <TextView
+                            android:id="@+id/yearText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Year: "
+                            android:textColor="?colorOnPrimary"
+                            android:textSize="20sp" />
+
+                    <Button
+                            android:id="@+id/setFavoriteBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:backgroundTint="?colorSecondary"
+                            android:text="Set As Favorite Movie"
+                            android:textColor="?colorOnSecondary"
+                            android:visibility="invisible"
+                            tools:visibility="visible" />
+
+                    <Button
+                            android:id="@+id/addWatchlistBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:backgroundTint="?colorSecondary"
+                            android:text="Add To Watchlist"
+                            android:textColor="?colorOnSecondary"
+                            android:visibility="invisible"
+                            tools:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Description:"
+                    android:textColor="?colorOnPrimary"
+                    android:textSize="24sp" />
+
+            <TextView
+                    android:id="@+id/descText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="?colorPrimaryDark"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="?colorOnPrimary"
+                    android:textSize="20sp" />
+
+            <Button
+                    android:id="@+id/reviewsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="?colorSecondary"
+                    android:text="See Reviews"
+                    android:textColor="?colorOnSecondary" />
+
+            <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Recommended Movies :"
+                    android:textColor="?colorOnPrimary"
+                    android:textSize="24sp" />
+
+            <LinearLayout
+                    android:id="@+id/recLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="?colorPrimaryDark"
+                    android:orientation="horizontal">
+
+                <ImageButton
+                        android:id="@+id/recMovie1ImgBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="?colorPrimaryDark"
+                        android:src="?android:attr/galleryItemBackground"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                        android:id="@+id/recMovie2ImgBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="?colorPrimaryDark"
+                        android:src="?android:attr/galleryItemBackground"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                        android:id="@+id/recMovie3ImgBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="?colorPrimaryDark"
+                        android:src="?android:attr/galleryItemBackground"
+                        tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

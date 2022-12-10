@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_baseline_home_24"
+                android:title="@string/home_title" />
+        <item
+                android:id="@+id/nav_friends"
+                android:icon="@drawable/ic_baseline_groups_24"
+                android:title="@string/friend_list_title" />
+        <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:title="@string/profile_title" />
+
+        <item
+                android:id="@+id/nav_add_movie"
+                android:title="@string/admin_add_movie"
+                android:icon="@drawable/add_movie" />
+        <item
+                android:id="@+id/nav_edit_movie"
+                android:title="@string/admin_edit_movie"
+                android:icon="@drawable/edit_movie" />
+        <item
+                android:title="@string/admin_remove_movie"
+                android:id="@+id/nav_remove_movie"
+                android:icon="@drawable/remove_movie" />
+        <item
+                android:title="@string/admin_edit_user"
+                android:id="@+id/nav_edit_user"
+                android:icon="@drawable/edit_user" />
+        <item
+                android:id="@+id/nav_user_list"
+                android:icon="@drawable/user_list"
+                android:title="@string/user_list" />
+        <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_baseline_logout_24"
+                android:title="@string/menu_logout" />
+    </group>
+</menu>

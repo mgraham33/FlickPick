@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <attr name="colorPrimaryDark" format="reference|color"/>
+    <attr name="colorPrimaryLight" format="reference|color"/>
+    <attr name="colorNavButton" format="reference|color"/>
+</resources>

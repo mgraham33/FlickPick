@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mobile_navigation"
+        app:startDestination="@id/homeFragment">
+    <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.flickpick.flickpick.ui.movie.HomeFragment"
+            android:label="fragment_home_screen"
+            tools:layout="@layout/fragment_home_screen" />
+    <fragment
+            android:id="@+id/userProfileFragment"
+            android:name="com.flickpick.flickpick.ui.profile.UserProfileFragment"
+            android:label="fragment_user_profile"
+            tools:layout="@layout/fragment_user_profile" />
+    <fragment
+            android:id="@+id/friendsListFragment"
+            android:name="com.flickpick.flickpick.ui.profile.FriendsListFragment"
+            android:label="fragment_friends_list"
+            tools:layout="@layout/fragment_friends_list" />
+    <fragment
+        android:id="@+id/messagingFragment"
+        android:name="com.flickpick.flickpick.ui.profile.MessagingFragment"
+        android:label="fragment_messaging_screen"
+        tools:layout="@layout/fragment_messaging_screen" />
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.flickpick.flickpick.ui.movie.MovieFragment"
+        android:label="fragment_movie_screen"
+        tools:layout="@layout/fragment_movie_screen" />
+    <fragment
+        android:id="@+id/genreFragment"
+        android:name="com.flickpick.flickpick.ui.movie.GenreFragment"
+        android:label="fragment_genre_screen"
+        tools:layout="@layout/fragment_genre_screen" />
+
+    <fragment
+            android:id="@+id/searchFragment"
+            android:name="com.flickpick.flickpick.ui.search.SearchFragment"
+            android:label="fragment_search"
+            tools:layout="@layout/fragment_search" />
+    <fragment
+            android:id="@+id/editMovieFragment"
+            android:name="com.flickpick.flickpick.ui.admin.EditMovieFragment"
+            android:label="fragment_edit_movie"
+            tools:layout="@layout/fragment_edit_movie" />
+    <fragment
+        android:id="@+id/addMovieFragment"
+        android:name="com.flickpick.flickpick.ui.admin.EditMovieFragment"
+        android:label="fragment_add_movie"
+        tools:layout="@layout/fragment_edit_movie_add"/>
+    <fragment
+            android:id="@+id/removeMovieFragment"
+            android:name="com.flickpick.flickpick.ui.admin.EditMovieFragment"
+            android:label="fragment_remove_movie"
+            tools:layout="@layout/fragment_edit_movie_remove"/>
+    <fragment
+            android:id="@+id/editUserFragment"
+            android:name="com.flickpick.flickpick.ui.admin.EditUserFragment"
+            android:label="fragment_edit_user"
+            tools:layout="@layout/fragment_edit_user" />
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.flickpick.flickpick.ui.review.ReviewFragment"
+        android:label="fragment_review_screen"
+        tools:layout="@layout/fragment_review_screen" />
+        
+    <fragment
+        android:id="@+id/friendRequestFragment"
+        android:name="com.flickpick.flickpick.ui.profile.FriendRequestFragment"
+        android:label="fragment_friend_request"
+        tools:layout="@layout/fragment_friend_request" />
+
+    <fragment
+        android:id="@+id/blockedListFragment"
+        android:name="com.flickpick.flickpick.ui.profile.BlockedListFragment"
+        android:label="fragment_blocked_list"
+        tools:layout="@layout/fragment_blocked_list" />
+    <fragment
+        android:id="@+id/createReviewFragment"
+        android:name="com.flickpick.flickpick.ui.review.CreateReviewFragment"
+        android:label="fragment_create_review_screen"
+        tools:layout="@layout/fragment_create_review_screen" />
+    <fragment
+        android:id="@+id/otherUserProfileFragment"
+        android:name="com.flickpick.flickpick.ui.profile.OtherUserProfileFragment"
+        android:label="fragment_other_user_profile"
+        tools:layout="@layout/fragment_other_user_profile" />
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.flickpick.flickpick.ui.admin.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" />
+</navigation>

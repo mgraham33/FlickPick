@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/action_settings"
+            android:title="@string/action_settings"
+            android:orderInCategory="10"
+            app:showAsAction="never" />
+    <item
+            android:id="@+id/sign_out_opts"
+            android:orderInCategory="100"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="@string/exit">
+        <menu>
+            <item
+                    android:title="@string/sign_out"
+                    android:id="@+id/signout" />
+            <item
+                    android:title="@string/sign_out_quit"
+                    android:id="@+id/signout_quit" />
+            <item
+                    android:title="@string/quit"
+                    android:id="@+id/quit" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary"
+    tools:context=".ui.review.ReviewFragment">
+
+    <TextView
+        android:id="@+id/reviewTitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="17dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="17dp"
+        android:paddingBottom="10dp"
+        android:text="Reviews For &quot;Movie Title&quot;"
+        android:textColor="?colorOnPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view21"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_weight="1"
+        android:background="?colorOnPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/reviewTitleText"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/view23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view21">
+
+        <LinearLayout
+            android:id="@+id/reviewLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view22"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="?colorOnPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/reviewTitleText"
+                tools:layout_editor_absoluteX="4dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/view23"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="?colorOnPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/createReviewBtn"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+            android:id="@+id/createReviewBtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="?colorSecondary"
+            android:text="Create A Review"
+            android:textColor="?colorOnSecondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

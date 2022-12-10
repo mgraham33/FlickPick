@@ -1,0 +1,45 @@
+<resources>
+    <!-- Remember to use %s wherever a variable will occur -->
+    <string name="app_name">Flick Pick</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="welcome">Welcome, %s!</string>
+    <string name="invalid_username_character">Username cannot have the \"%s\" character</string>
+    <string name="invalid_username_short">Username is too short</string>
+    <string name="invalid_username_long">Username is too long</string>
+    <string name="invalid_username_email">Cannot sign in with email</string>
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="invalid_password_short">Password must be at least 6 characters long</string>
+    <string name="invalid_password_long">Password shouldn\'t be longer than 32 characters</string>
+    <string name="invalid_password_space">Password must not have a space at the beginning or end</string>
+    <string name="invalid_password_weak">Password must contain at least:\n
+        - One uppercase and lowercase letter\n
+        - One number\n
+        - One symbol</string>
+    <string name="invalid_credentials">Username or password do not match</string>
+    <string name="login_failed">Login failed</string>
+    <string name="new_user_prompt">New here? Create a new account instead:</string>
+
+    <!--Profile Page-->
+    <string name="profile_title">Profile</string>
+    <string name="profile_image">Set profile picture</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="change_username">Change Username</string>
+    <string name="change_email">Change Email Address</string>
+    <string name="change_password">Change Password</string>
+    <string name="social_settings">Social Settings</string>
+    <string name="view_friends">View Friends List</string>
+    <string name="view_blocked">View Block List</string>
+    <string name="service_select">Select Streaming Services</string>
+    <string name="service_netflix">Netflix</string>
+    <string name="service_hulu">Hulu</string>
+    <string name="service_amazon">Amazon Prime Video</string>
+    <string name="service_hbo">HBO Max</string>
+    <string name="service_disney">Disney+</string>
+
+
+</resources>

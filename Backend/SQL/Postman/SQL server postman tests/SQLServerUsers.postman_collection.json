@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "4b0c5666-34b7-47f5-934c-2e45d8c1870e",
+		"name": "SQLServerUsers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23068485"
+	},
+	"item": [
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mg33\",\r\n    \"email\": \"mgraham@iastate.edu\",\r\n    \"password\": \"1234\",\r\n    \"pfp\": \"/home/mgraham/Backend/SQL/../../Documents/Images/PFPs/mg33.jpg\",\r\n    \"userType\": \"Admin\",\r\n    \"favMID\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/users",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/users/1",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"cmurawski69\",\r\n    \"userType\": \"User\",\r\n    \"password\": \"6969420$\",\r\n    \"email\": \"murawski@iastate.edu\",\r\n    \"favMID\": 1,\r\n    \"pfp\": \"new File('../../Documents/Images/PFPs/cmurawski.jpg')\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/users/3",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/users/2",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/users",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/users/(username)/(password)",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"(username)",
+						"(password)"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

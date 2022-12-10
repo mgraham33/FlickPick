@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "8d9b9f4c-b10f-4a18-b1c1-038621a134ed",
+		"name": "SQLLocalLinks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23068478"
+	},
+	"item": [
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"netflix\": \"\",\r\n    \"hulu\": \"\",\r\n    \"hbo_max\": \"\",\r\n    \"disney_plus\": \"https://www.disneyplus.com/movies/miracle/38uh6GJall9b\",\r\n    \"amazon_prime\": \"https://www.amazon.com/gp/video/detail/amzn1.dv.gti.88a9f712-6865-ab11-d4de-86d584907239?autoplay=0&ref_=atv_cf_strg_wb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/links",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"links"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/links/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"links",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"netflix\": \"netflix.com\",\r\n    \"hulu\": \"\",\r\n    \"hbo_max\": \"\",\r\n    \"disney_plus\": \"https://www.disneyplus.com/movies/miracle/38uh6GJall9b\",\r\n    \"amazon_prime\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/links/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"links",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/links/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"links",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/links",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"links"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

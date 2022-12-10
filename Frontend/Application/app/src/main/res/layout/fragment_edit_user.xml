@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.admin.EditUserFragment"
+        android:background="?colorPrimary">
+
+
+    <ProgressBar
+        android:id="@+id/adminAccountLoading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="?colorSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/adminScrollView"
+        app:layout_constraintEnd_toEndOf="@+id/adminScrollView"
+        app:layout_constraintStart_toStartOf="@+id/adminScrollView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+            app:shapeAppearance="@style/circle"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:id="@+id/adminProfilePic"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="1dp"
+            android:cropToPadding="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="5dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="3dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/adminView"
+            android:contentDescription="@string/profile_image"
+            tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            android:id="@+id/adminCamIcon"
+            app:layout_constraintEnd_toEndOf="@+id/adminProfilePic"
+            app:layout_constraintBottom_toBottomOf="@+id/adminProfilePic" />
+
+    <TextView
+            android:id="@+id/adminUsernameText"
+            android:layout_width="260dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="25dp"
+            android:gravity="bottom"
+            android:text="@string/default_username"
+            android:textColor="?colorOnPrimary"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/adminView"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintStart_toEndOf="@+id/adminProfilePic"
+            android:layout_marginStart="10dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+            android:id="@+id/adminEmailText"
+            android:layout_width="260dp"
+            android:layout_height="25dp"
+            android:gravity="top"
+            android:text="@string/default_email"
+            android:textColor="?colorOnPrimary"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/adminView"
+            android:layout_marginBottom="25dp"
+            android:textStyle="bold"
+            android:textIsSelectable="false"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toEndOf="@+id/adminProfilePic"
+            android:layout_marginStart="10dp" />
+
+    <View
+        android:id="@+id/adminView"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_marginTop="125dp"
+        android:background="?colorOnPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminView"
+            app:layout_constraintVertical_bias="0.0"
+            android:id="@+id/adminScrollView">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/adminAccountSettingsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/account_settings"
+                    android:textColor="?colorOnPrimary"
+                    android:textSize="20sp" />
+
+            <Button
+                    android:id="@+id/adminChangeUsernameButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:backgroundTint="?colorSecondary"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="20dp"
+                    android:text="@string/change_username"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="?colorOnSecondary"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck" />
+
+            <Button
+                    android:id="@+id/adminChangeEmailButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:backgroundTint="?colorSecondary"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="20dp"
+                    android:text="@string/change_email"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="?colorOnSecondary"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck" />
+
+            <Button
+                    android:id="@+id/adminChangePasswordButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:backgroundTint="?colorSecondary"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="20dp"
+                    android:text="@string/change_password"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="?colorOnSecondary"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck" />
+
+            <TextView
+                    android:id="@+id/userPrivilegeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/user_type_title"
+                    android:textColor="?colorOnPrimary"
+                    android:textSize="20sp" />
+
+            <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:id="@+id/userPrivilege"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/user_types"
+                    android:paddingStart="20dp" />
+
+            <TextView
+                    android:id="@+id/adminDangerText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/account_danger"
+                    android:textColor="?colorError"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="16dp" />
+
+            <Button
+                    android:id="@+id/adminResetButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="28dp"
+                    android:backgroundTint="?colorError"
+                    android:text="@string/reset_account"
+                    android:textAlignment="viewStart"
+                    android:textColor="?colorOnSecondary"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck"
+                    android:textAllCaps="false"
+                    android:paddingStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginEnd="28dp" />
+
+            <Button
+                    android:id="@+id/adminDeleteButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="28dp"
+                    android:backgroundTint="?colorError"
+                    android:text="@string/delete_account"
+                    android:textAlignment="viewStart"
+                    android:textColor="?colorOnSecondary"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck"
+                    android:textAllCaps="false"
+                    android:paddingStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginEnd="28dp" />
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

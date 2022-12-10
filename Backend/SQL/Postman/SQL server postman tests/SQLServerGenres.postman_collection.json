@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "d0238402-35d0-4879-b32e-953c68e1cf44",
+		"name": "SQLServerGenres",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23068485"
+	},
+	"item": [
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"genre1\": \"Action\",\r\n    \"genre2\": \"Drama\",\r\n    \"genre3\": \"Sports\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/genres",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/genres/3",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"genres",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"genre1\": \"Sports\",\r\n    \"genre2\": \"Drama\",\r\n    \"genre3\": \"Biography\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/genres/2",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"genres",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/genres/3",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"genres",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "coms-309-017.class.las.iastate.edu:8080/genres",
+					"host": [
+						"coms-309-017",
+						"class",
+						"las",
+						"iastate",
+						"edu"
+					],
+					"port": "8080",
+					"path": [
+						"genres"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

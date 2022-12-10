@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/genreText"
+                android:layout_width="282dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="15dp"
+                android:text="Genre"
+                android:textColor="?colorOnPrimary"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/viewAllGenreBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/view_all"
+                android:textColor="?colorOnPrimary"
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="?colorPrimaryDark">
+
+            <LinearLayout
+                android:id="@+id/horizontalScrollGenre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?colorPrimaryDark"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/movie1Btn"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="?colorPrimaryDark"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:srcCompat="?android:attr/galleryItemBackground" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/movie2Btn"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="?colorPrimaryDark"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:srcCompat="?android:attr/galleryItemBackground" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/movie3Btn"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="?colorPrimaryDark"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:srcCompat="?android:attr/galleryItemBackground" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/movie4Btn"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="?colorPrimaryDark"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:srcCompat="?android:attr/galleryItemBackground" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/movie5Btn"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="?colorPrimaryDark"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:srcCompat="?android:attr/galleryItemBackground" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

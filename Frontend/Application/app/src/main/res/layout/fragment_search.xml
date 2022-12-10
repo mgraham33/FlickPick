@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.search.SearchFragment"
+        android:id="@+id/scrollResults"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <Button
+                    android:text="@string/filters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filterButton"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    android:textAlignment="viewStart"
+                    android:paddingStart="10dp"
+                    android:textSize="12sp"
+                    tools:ignore="TextContrastCheck"
+                    android:drawableEnd="@android:drawable/arrow_down_float"
+                    android:backgroundTint="?colorSecondary"
+                    android:paddingEnd="10dp"
+                    android:textColor="?colorOnSecondary" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/filters">
+
+                <TextView
+                        android:text="@string/duration_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textWidth"
+                        android:layout_weight="0"
+                        android:layout_gravity="center_vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="invisible" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star1From"
+                        app:layout_constraintStart_toEndOf="@+id/textWidth"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/star2From"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star2From"
+                        app:layout_constraintStart_toEndOf="@+id/star1From"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/star3From"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star3From"
+                        app:layout_constraintStart_toEndOf="@+id/star2From"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/star4From"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star4From"
+                        app:layout_constraintStart_toEndOf="@+id/star3From"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/star5From"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star5From"
+                        app:layout_constraintStart_toEndOf="@+id/star4From"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/star1To"
+                        android:layout_marginEnd="20dp"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star1To"
+                        app:layout_constraintEnd_toStartOf="@+id/star2To"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/star5From"
+                        android:layout_marginStart="20dp"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star2To"
+                        app:layout_constraintEnd_toStartOf="@+id/star3To"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/star1To"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star3To"
+                        app:layout_constraintEnd_toStartOf="@+id/star4To"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/star2To"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star4To"
+                        app:layout_constraintEnd_toStartOf="@+id/star5To"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/star3To"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/empty_star"
+                        android:id="@+id/star5To"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/star4To"
+                        app:tint="@android:color/holo_orange_light" />
+
+                <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:id="@+id/tableLayout">
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:text="@string/rating_filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ratingFilterText"
+                                android:layout_gravity="center_vertical" />
+
+                        <SeekBar
+                                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:max="10"
+                                android:progress="3"
+                                android:id="@+id/ratingFilterFrom"
+                                android:layout_weight="1"
+                                android:progressBackgroundTint="#00FFFFFF"
+                                android:progressTint="#00FFFFFF"
+                                android:secondaryProgressTint="#00FFFFFF"
+                                android:thumbTint="#00FFFFFF"
+                                app:tickMarkTint="#00FFFFFF"
+                                android:foregroundTint="#00FFFFFF"
+                                android:backgroundTint="#00FFFFFF" />
+
+                        <TextView
+                                android:text="@string/filter_between"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ratingBetween" />
+
+                        <SeekBar
+                                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:max="10"
+                                android:progress="3"
+                                android:id="@+id/ratingFilterTo"
+                                android:layout_weight="1"
+                                android:progressBackgroundTint="#00FFFFFF"
+                                android:progressTint="#00FFFFFF"
+                                android:secondaryProgressTint="#00FFFFFF"
+                                android:thumbTint="#00FFFFFF"
+                                app:tickMarkTint="#00FFFFFF"
+                                android:foregroundTint="#00FFFFFF"
+                                android:backgroundTint="#00FFFFFF" />
+
+                    </TableRow>
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:text="@string/year_filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/yearFilterText"
+                                android:layout_weight="0"
+                                android:layout_gravity="center_vertical" />
+
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                        <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/yearFilterFrom"
+                                android:layout_weight="3"
+                                android:textSize="14sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                                android:paddingTop="0dp"
+                                android:importantForAutofill="no"
+                                android:nextFocusRight="@id/yearFilterTo" />
+
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                        <TextView
+                                android:text="@string/filter_between"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/yearBetween"
+                                android:layout_weight="0"
+                                android:gravity="center_vertical" />
+
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                        <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/yearFilterTo"
+                                android:layout_weight="3"
+                                android:textSize="14sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                                android:paddingTop="0dp"
+                                android:importantForAutofill="no" />
+
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:text="@string/duration_filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/durationFilterText"
+                                android:layout_weight="0"
+                                android:layout_gravity="center_vertical" />
+
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                        <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/durationFilterFrom"
+                                android:layout_weight="3"
+                                android:textSize="14sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                                android:hint="@string/duration_hint"
+                                android:paddingTop="0dp"
+                                android:importantForAutofill="no" />
+
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                        <TextView
+                                android:text="@string/filter_between"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/durationBetween"
+                                android:layout_weight="0"
+                                android:gravity="center_vertical" />
+
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                        <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/durationFilterTo"
+                                android:layout_weight="3"
+                                android:textSize="14sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                                android:hint="@string/duration_hint"
+                                android:paddingTop="0dp"
+                                android:importantForAutofill="no" />
+
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:id="@+id/tableLayout2">
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?colorSecondary">
+
+                        <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp" />
+                    </TableRow>
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/filterGenres">
+
+                        <TextView
+                                android:text="@string/genre_filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/genreFilterText"
+                                android:layout_weight="0"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center_vertical" />
+
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:id="@+id/filterGenreRows"
+                                android:layout_gravity="fill_horizontal" />
+
+                    </TableRow>
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?colorSecondary">
+
+                        <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp" />
+                    </TableRow>
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/filterServices">
+
+                        <TextView
+                                android:text="@string/service_filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/serviceFilterText"
+                                android:layout_weight="0"
+                                android:gravity="right|center_vertical"
+                                android:layout_gravity="center_vertical" />
+
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:id="@+id/filterServicesRows"
+                                android:layout_gravity="fill_horizontal" />
+                    </TableRow>
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?colorSecondary">
+
+                        <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <Button
+                        android:text="@string/reset_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/resetFilterBtn"
+                        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="3dp"
+                        app:layout_constraintEnd_toStartOf="@+id/applyFilterBtn"
+                        android:backgroundTint="?colorSecondary"
+                        android:textColor="?colorOnSecondary" />
+
+                <Button
+                        android:text="@string/apply_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/applyFilterBtn"
+                        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="3dp"
+                        app:layout_constraintStart_toEndOf="@id/resetFilterBtn"
+                        android:backgroundTint="?colorSecondary"
+                        android:textColor="?colorOnSecondary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+                android:text="@string/primary_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/primaryResultsText"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp" />
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mainSearchResults"></LinearLayout>
+
+        <TextView
+                android:text="@string/secondary_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/secondaryResultsText"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/secondarySearchResults">
+
+            <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchResultProgress" />
+        </LinearLayout>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

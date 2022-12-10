@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.flickpick.flickpick">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".util.AppController"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FlickPick"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.search.SearchableActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".util.NavigationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FlickPick.NoActionBar" />
+        <activity
+            android:name=".ui.signup.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.start.StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Debug"
+            android:exported="false"/>
+<!--            <intent-filter>-->
+
+<!--                &lt;!&ndash;-->
+<!--                For the time being, the debug screen is the launch screen so it's easier to test things.-->
+<!--                Remember to change back to .ui.start.StartActivity for non-development builds!-->
+<!--                &ndash;&gt;-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity
+                android:name=".ui.login.LoginActivity"
+                android:exported="true" />
+
+        <provider android:name=".ui.search.SearchSuggestions"
+                android:authorities="com.flickpick.SearchSuggestions"
+                android:readPermission="com.flickpick.flickpick.ui.search.SearchSuggestions.READ_MY_DATA"
+                android:writePermission="com.flickpick.flickpick.ui.search.SearchSuggestions.WRITE_MY_DATA">
+            <path-permission android:pathPrefix="/search_suggest_query"
+                    android:readPermission="android.permission.GLOBAL_SEARCH" />
+        </provider>
+    </application>
+
+</manifest>

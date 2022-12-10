@@ -1,0 +1,196 @@
+<resources>
+    <!-- Remember to use %s wherever a variable will occur -->
+    <string name="app_name">Flick Pick</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="action_guest">Continue as Guest</string>
+    <string name="welcome">Welcome, %s!</string>
+    <plurals name="invalid_username_character">
+        <item quantity="one">Username cannot have the \"%s\" character</item>
+        <item quantity="other">Username cannot have the \"%s\" characters</item>
+    </plurals>
+    <string name="invalid_username_short">Username is too short</string>
+    <string name="invalid_username_email">Cannot sign in with email</string>
+    <string name="invalid_username_guest">Cannot sign in as guest</string>
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="invalid_password_short">Password must be at least 6 characters long</string>
+    <string name="invalid_password_long">Password shouldn\'t be longer than 32 characters</string>
+    <string name="invalid_password_space">Password must not have a space at the beginning or end</string>
+    <string name="invalid_password_match">Passwords must match</string>
+    <string name="invalid_password_weak">Password must contain at least:\n
+        - One uppercase and lowercase letter\n
+        - One number\n
+        - One symbol</string>
+    <string name="invalid_credentials">Username or password is incorrect</string>
+    <string name="login_failed">There was an unexpected error while logging in! Error code: %s</string>
+    <string name="new_user_prompt">New here? Create a new account instead:</string>
+
+    <!-- Profile Page -->
+    <string name="profile_title">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="guest_sign_in">Sign in to access all features</string>
+    <string name="profile_image">Set profile picture</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="change_username">Change Username</string>
+    <string name="change_email">Change Email Address</string>
+    <string name="change_password">Change Password</string>
+    <string name="social_settings">Social Settings</string>
+    <string name="view_friends">View Friends List</string>
+    <string name="view_blocked">View Block List</string>
+    <string name="service_select">Select Streaming Services</string>
+    <string name="service_netflix">Netflix</string>
+    <string name="service_hulu">Hulu</string>
+    <string name="service_amazon">Amazon Prime Video</string>
+    <string name="service_hbo">HBO Max</string>
+    <string name="service_disney">Disney+</string>
+    <string name="search_history_amount">How many previous searches to show as suggestions</string>
+    <string name="clear_searches">Clear Recent Searches</string>
+    <string name="account_danger">Danger Zone</string>
+    <string name="reset_account">Reset Account</string>
+    <string name="delete_account">Delete Account</string>
+
+    <string name="reset_dialog">This will reset all settings to their default values!</string>
+    <string name="delete_dialog">Are you sure? This is an irreversible action!</string>
+
+    <string name="text_dialog_default">Edit text</string>
+    <string name="text_dialog_username">Change username</string>
+    <string name="prompt_new_username">New username</string>
+    <string name="text_dialog_email">Change email</string>
+    <string name="prompt_new_email">New email</string>
+    <string name="text_dialog_password">Change password</string>
+    <string name="prompt_new_password">New password</string>
+    <string name="prompt_password_check">Confirm password</string>
+
+    <string name="username_error">There was an error setting your username: %s</string>
+    <string name="email_error">There was an error setting your email: %s</string>
+    <string name="password_error">There was an error setting your password: %s</string>
+    <string name="reset_error">There was an error resetting your account: %s</string>
+    <string name="delete_error">There was an error deleting your account: %s</string>
+    <string name="pfp_error">There was an error setting your profile picture: %s</string>
+
+    <string name="invalid_username_same">New username shouldn\'t be the same</string>
+    <string name="invalid_email_same">New email shouldn\'t be the same</string>
+    <string name="invalid_password_same">New password shouldn\'t be the same</string>
+
+    <string name="user_error">There was an error getting your account information: %s</string>
+
+    <string name="view_all">View All</string>
+    <string name="logo_desc">Flickpick logo</string>
+    <string name="edit_desc">Edit</string>
+
+    <string name="logout_confirm_title">Logout?</string>
+    <string name="logout_confirm_msg">Are you sure you want to logout?</string>
+
+    <string name="home_title">Home</string>
+    <string name="genre_title">%s Movies</string>
+    <string name="menu_logout">Logout</string>
+    <string name="friend_list_title">Friends List</string>
+    <string name="friend_request_title">Incoming Friend Requests</string>
+
+    <string name="loading">Loading…</string>
+
+    <string name="review_title">Reviews for %s</string>
+    <string name="reviewing_title">Reviewing %s</string>
+
+    <string name="favorite_movie_button">Set as favorite movie</string>
+    <string name="unfavorite_movie">Unfavorite Movie</string>
+    <string name="no_favorite">No Favorite Set</string>
+
+    <string name="unfavorite_success">Removed %s as favorite</string>
+    <string name="favorite_success">Set %s as favorite</string>
+    <string name="unfavorite_fail">Failed to remove %s as favorite</string>
+    <string name="favorite_fail">Failed to set %s as favorite</string>
+
+    <string name="favorite_movie">Favorite Movie</string>
+
+    <string name="search_hint">Search for a movie</string>
+    <string name="searching">Searching for %s</string>
+    <string name="search_title">Search: %s</string>
+    <string name="search_no_results">No results found for %s</string>
+    <plurals name="genre_list">
+        <item quantity="one">Genre: %s</item>
+        <item quantity="other">Genres: %s</item>
+    </plurals>
+    <string name="genre_list_zero">No listed genres.</string>
+    <string name="filters">Filters</string>
+    <string name="rating_filter">Ratings:</string>
+    <string name="year_filter">Year:</string>
+    <string name="genre_filter">Genres:</string>
+    <string name="duration_filter">Duration:</string>
+    <string name="duration_hint">(Minutes)</string>
+    <string name="service_filter">Available\non:</string>
+    <string name="apply_filter">Apply</string>
+    <string name="reset_filter">Reset</string>
+
+    <string name="filter_between">to</string>
+    <string name="primary_results">Best matches for \"%s\":</string>
+    <string name="secondary_results">Other results</string>
+
+    <string name="clear_search_history_title">Clear search history?</string>
+    <string name="clear_search_history">Are you sure you want to clear your search history?</string>
+
+    <!--Admin Tools-->
+    <string name="admin_add_movie">Add Movie</string>
+    <string name="admin_edit_movie">Edit Movie</string>
+    <string name="admin_remove_movie">Remove Movie</string>
+    <string name="admin_add_genre">Add Genre</string>
+    <string name="admin_remove_genre">Remove Genre</string>
+    <string name="admin_edit_user">Edit User</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="year_hint">Year</string>
+    <string name="minutes_hint">Duration (Minutes)</string>
+    <string name="description_hint">Description</string>
+    <string name="movie_id">Enter Movie ID</string>
+    <string name="movie_id_hint">Movie ID</string>
+    <string name="user_id">Enter User ID</string>
+    <string name="user_id_hint">User ID</string>
+    <string name="user_list">User Directory</string>
+
+    <string name="add_movie_success">Added movie!</string>
+    <string name="add_movie_fail">Failed to add movie!</string>
+    <string name="edit_movie_success">Edited movie!</string>
+    <string name="edit_movie_fail">Failed to edit movie!</string>
+    <string name="delete_movie_success">Edited movie!</string>
+    <string name="delete_movie_fail">Failed to edit movie!</string>
+
+    <string name="user_type_title">Set User Privileges</string>
+    <string-array name="user_types">
+        <item>Guest</item>
+        <item>User</item>
+        <item>Admin</item>
+    </string-array>
+
+    <!-- Errors -->
+    <string name="generic_error">Error!</string>
+    <string name="parse_user_error">Error fetching one or more users</string>
+    <string name="no_internet">Could not connect to server. Check your internet connection</string>
+    <string name="not_signed_in_error">Cannot change user settings when not logged in</string>
+    <string name="user_not_specified">User not specified; cannot edit</string>
+    <string name="unknown_edit_user_error">Unknown error while editing user: %s</string>
+    <string name="default_username">Couldn\'t fetch username</string>
+    <string name="default_email">Couldn\'t fetch email</string>
+    <string name="genre_error_title">Error fetching genres</string>
+    <string name="service_error_title">Error fetching services</string>
+    <string name="guest_sign_in_error">Error signing in as guest</string>
+    <string name="fetch_pfp_error">Could not fetch user profile picture</string>
+    <string name="edit_current_user">Go to account screen to edit signed in user</string>
+    <string name="fetch_movie_image_error">Could not fetch poster image</string>
+    <string name="parse_movie_image_fail">Could not parse the image from the server</string>
+    <string name="server_error_json">Could not parse server response of: %s</string>
+    <string name="server_error_json_short">Could not parse server response</string>
+    <string name="user_input_error">\"%1$s\" is not a valid %2$s.</string>
+    <string name="image_select_error">Could not set image: %s</string>
+    <string name="user_input_movie_id">movie id</string>
+    <string name="server_error">There was a sever error: %s. The app will likely not work as expected.</string>
+    <string name="server_error_basic">There was a server error: %s.</string>
+    <string name="apply_filter_fail">Could not apply filters: %s</string>
+    <string name="delete_already">Error deleting account: this account doesn\'t exist!</string>
+    <string name="unknown_error">Unknown error!</string>
+
+    <string name="empty" />
+    <string name="exit_confirm_title">Are you sure you want to exit?</string>
+</resources>

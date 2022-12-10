@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Debug">
+
+    <TextView
+            android:text="DEBUG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/debugTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp" />
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="35dp">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_horizontal">
+
+            <Button
+                    android:text="Login Screen"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/debugBtnLogin"
+                    android:layout_marginEnd="5dp" />
+
+            <Button
+                    android:id="@+id/debugBtnRegister"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:text="Register Screen"
+                    android:layout_marginStart="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_horizontal">
+
+            <Button
+                    android:text="Start Screen"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/debugBtnStart"
+                    android:layout_marginEnd="5dp" />
+
+            <Button
+                    android:id="@+id/debugBtnFakeLogin"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Dummy Login" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+            <Button
+                    android:text="Dialog"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/debugBtnDialog"
+                    android:layout_marginEnd="5dp" />
+
+            <Button
+                    android:id="@+id/debugBtnNav"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Navigation" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/debugBtn"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="button" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Button" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

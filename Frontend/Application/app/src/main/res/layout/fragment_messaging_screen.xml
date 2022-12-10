@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.MessagingFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="?colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/pfpMsgBtn"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="?colorPrimary"
+            android:scaleType="fitXY"
+            tools:src="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/friendInfoBtn"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Friend Name"
+            android:textColor="?colorOnPrimary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/msgScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/view21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view20">
+
+        <LinearLayout
+            android:id="@+id/msgLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/view21"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_weight="1"
+        android:background="?colorOnPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="?colorPrimary"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/sendMessageText"
+                style="@android:style/Widget.Material.Light.EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="?colorOnPrimary"
+                android:ems="10"
+                android:hint="Enter Message Here..."
+                android:inputType="textPersonName"
+                android:textColor="?colorOnPrimary"
+                android:textColorHint="?colorOnPrimary" />
+
+            <ImageButton
+                android:id="@+id/sendMsgBtn"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="?colorPrimaryDark"
+                android:src="@android:drawable/ic_menu_send" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view20"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_weight="1"
+        android:background="?colorOnPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

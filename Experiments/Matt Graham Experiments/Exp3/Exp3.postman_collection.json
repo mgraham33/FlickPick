@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "9baec8af-40fa-401b-aab6-e6764a6ff04a",
+		"name": "Exp3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23068478"
+	},
+	"item": [
+		{
+			"name": "LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/people",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\": \"Matt\", \"lastName\": \"Graham\", \"address\": \"Street\", \"telephone\": 1234567890}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/people",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/people/Matt",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"Matt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\": \"Matthew\", \"lastName\": \"Graham\", \"address\": \"Avenue\", \"telephone\": 9087654321}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/people/Matt",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"Matt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/people/Matt",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"Matt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

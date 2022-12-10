@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "22db8353-0d49-431c-8637-23e8396d5636",
+		"name": "H2MoviesPostmanTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23068478"
+	},
+	"item": [
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"hours\" : \"1\",\r\n\"minutes\"  : \"45\",\r\n\"title\"   : \"Star Wars: Episode IV – A New Hope\",\r\n\"year\" : \"1977\",\r\n\"genre\" : \"Sci-fi/Sci-fi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movies/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"hours\" : \"1\",\r\n\"minutes\"  : \"49\",\r\n\"title\"   : \"Animal House\",\r\n\"year\" : \"1978\",\r\n\"genre\" : \"Comedy/Romance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movies/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movies/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

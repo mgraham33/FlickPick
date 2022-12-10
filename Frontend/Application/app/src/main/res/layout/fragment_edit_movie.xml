@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.admin.EditMovieFragment"
+        android:background="?colorPrimary">
+
+    <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/empty_star"
+            android:id="@+id/movieStar1"
+            android:layout_marginStart="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/movieStar2"
+            app:tint="@android:color/holo_orange_light"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+            android:layout_marginTop="179dp" />
+
+    <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/empty_star"
+            android:id="@+id/movieStar2"
+            app:layout_constraintStart_toEndOf="@+id/movieStar1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/movieStar3"
+            app:tint="@android:color/holo_orange_light"
+            android:layout_marginTop="179dp" />
+
+    <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/empty_star"
+            android:id="@+id/movieStar3"
+            app:layout_constraintStart_toEndOf="@+id/movieStar2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/movieStar4"
+            app:tint="@android:color/holo_orange_light"
+            android:layout_marginTop="179dp" />
+
+    <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/empty_star"
+            android:id="@+id/movieStar4"
+            app:layout_constraintStart_toEndOf="@+id/movieStar3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/movieStar5"
+            app:tint="@android:color/holo_orange_light"
+            android:layout_marginTop="179dp" />
+
+    <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/empty_star"
+            android:id="@+id/movieStar5"
+            app:layout_constraintStart_toEndOf="@+id/movieStar4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@android:color/holo_orange_light"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+            android:layout_marginTop="179dp" />
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:id="@+id/linearLayout6"
+            android:gravity="top">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    tools:src="@mipmap/ic_launcher"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/setMoviePosterBtn" />
+
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/adminMovieYearText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/year_filter"
+                    android:textColor="?colorOnPrimary" />
+
+                <EditText
+                    android:id="@+id/movieYearText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="?colorOnPrimary"
+                    android:ems="10"
+                    android:hint="@string/year_hint"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="?colorOnPrimary"
+                    android:textColorHint="?colorOnPrimary"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <Space
+                        android:layout_height="15dp"
+                        android:layout_width="match_parent" />
+
+                <TextView
+                    android:id="@+id/adminDurationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/duration_filter"
+                    android:textColor="?colorOnPrimary" />
+
+                <EditText
+                    android:id="@+id/movieMinutesText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="?colorOnPrimary"
+                    android:ems="10"
+                    android:hint="@string/minutes_hint"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="?colorOnPrimary"
+                    android:textColorHint="?colorOnPrimary"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                <SeekBar
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10"
+                        android:progress="0"
+                        android:id="@+id/movieRating"
+                        android:layout_weight="1"
+                        android:thumbTint="#00FFFFFF"
+                        app:tickMarkTint="#00FFFFFF"
+                        android:secondaryProgressTint="#00FFFFFF"
+                        android:progressTint="#00FFFFFF"
+                        android:progressBackgroundTint="#00FFFFFF"
+                        android:foregroundTint="#00FFFFFF"
+                        android:backgroundTint="#00FFFFFF"
+                        android:indeterminateTint="#00FFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/movieNameText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?colorOnPrimary"
+            android:hint="@string/movie_name"
+            android:inputType="textCapWords"
+            android:minHeight="48dp"
+            android:textColor="?colorOnPrimary"
+            android:textColorHint="?colorOnPrimary" />
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+        <EditText
+            android:id="@+id/movieDescText"
+            android:layout_width="fill_parent"
+            android:layout_height="372dp"
+            android:background="?colorPrimaryDark"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/description_hint"
+            android:inputType="textAutoCorrect|textMultiLine"
+            android:padding="15dp"
+            android:textColor="?colorOnPrimary"
+            android:textColorHint="?colorOnPrimary"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="15dp"
+            android:layout_margin="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/linearLayout7">
+
+        <Button
+                android:text="@android:string/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/movieCancelButton"
+                android:layout_weight="1"
+                android:backgroundTint="?colorSecondary"
+                android:textColor="?colorOnSecondary" />
+
+        <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+        <Button
+                android:text="@android:string/ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/movieOkButton"
+                android:layout_weight="1"
+                android:backgroundTint="?colorSecondary"
+                android:textColor="?colorOnSecondary" />
+
+    </LinearLayout>
+
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/movie_details_loading"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

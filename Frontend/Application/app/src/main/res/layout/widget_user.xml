@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_root">
+
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:id="@+id/userResult">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                    app:shapeAppearance="@style/circle"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    tools:srcCompat="@tools:sample/avatars"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/userImage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:cropToPadding="false"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="5dp"
+                    app:strokeColor="?colorNavButton"
+                    app:strokeWidth="3dp"
+                    android:contentDescription="@string/profile_image"
+                    tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck"
+                    android:background="?colorNavButton" />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/guest_icon"
+                    android:id="@+id/userType"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:tint="?colorNavButton" />
+
+            <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userResultProgress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/userImage"
+                    app:layout_constraintTop_toTopOf="@+id/userImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/userText"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="?colorSecondary">
+
+            <TextView
+                    android:text="Sample Text"
+                    android:layout_width="match_parent"
+                    android:id="@+id/usernameTitle"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="?colorOnSecondary"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:text="Email: person@example.com"
+                    android:layout_width="match_parent"
+                    android:id="@+id/userEmail"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="?colorOnSecondary"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:text="This will be used as a short description. This movie is the best movie ever. No, this desscription is not biased at all, why do you ask?"
+                    android:layout_width="match_parent"
+                    android:id="@+id/userBio"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="?colorOnSecondary"
+                    android:layout_weight="1"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_height="0dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

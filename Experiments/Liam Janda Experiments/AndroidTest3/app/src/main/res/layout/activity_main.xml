@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3B6B6"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="314dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="296dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterAdj" />
+
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="188dp"
+        android:backgroundTint="#A36363"
+        android:onClick="generateText"
+        android:text="Generate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterAdj" />
+
+    <EditText
+        android:id="@+id/enterVerb"
+        android:layout_width="266dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="280dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Verb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterAdj"
+        android:layout_width="265dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Adjective"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterNoun"
+        android:layout_width="265dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="208dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Noun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/adlib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="Madlib:"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

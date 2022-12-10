@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "3d0b5481-4780-4d6d-a2cc-f3f1b599161f",
+		"name": "Exp2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23068478"
+	},
+	"item": [
+		{
+			"name": "getTest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getTest?username=Matt",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getTest"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Matt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postTest1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/postTest1?username=Matt",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postTest1"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Matt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postTest2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"message\":\"Matt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/postTest2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postTest2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTest",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/deleteTest/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteTest",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putTest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/putTest/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"putTest",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

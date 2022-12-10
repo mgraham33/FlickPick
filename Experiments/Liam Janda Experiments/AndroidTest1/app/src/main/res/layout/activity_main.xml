@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAC9C9"
+    android:backgroundTint="#F1D2D2"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="141dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="129dp"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="103dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="395dp"
+        android:text="This is a Test."
+        android:textSize="24sp"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="151dp"
+        android:layout_height="127dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="257dp"
+        android:layout_marginBottom="4dp"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="135dp"
+        android:layout_height="63dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="269dp"
+        android:layout_marginBottom="199dp"
+        android:text="Please Check This Box" />
+
+</RelativeLayout>
